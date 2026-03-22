@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "public": true,
+  "buildCommand": "echo 'Static site - no build needed'",
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/apply",
+      "dest": "/apply.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/about.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "TG_BOT_TOKEN": "@TG_BOT_TOKEN",
+    "TG_CHAT_ID": "@TG_CHAT_ID"
+  }
+}
